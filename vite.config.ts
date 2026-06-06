@@ -12,4 +12,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    // Enable Nitro build plugin and set the preset to 'vercel' when building on Vercel
+    preset: process.env.VERCEL ? "vercel" : undefined,
+  },
 });
+
